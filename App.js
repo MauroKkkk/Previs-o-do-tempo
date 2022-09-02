@@ -15,6 +15,8 @@ export default function App() {
       flex: 1,
       backgroundColor: 'white',
       alignItems: 'center',
+      margin:0,
+      padding:0,
     },
     temperature:{
       alignItems: 'center',
@@ -60,16 +62,27 @@ export default function App() {
     cardTitle:{
       fontSize: 10,
     },
+    location:{
+      flexDirection:'row',
+      marginTop: 70,
+      padding: 10,
+      width: 350,
+      height:10,
+    }
   });
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.refreshButton}>
         <AntDesign name="bars" size={30} color='black'/>
       </TouchableOpacity>
+      <View style = {styles.location}>
+        <Text style={{fontSize:30}}>Marechal,</Text>
+        <Text style={{color:'gray'}}> Alagoas</Text>
+      </View>
       <View style={styles.container}>
-        <Feather name="sun" style={{marginTop: 150}} size={70} color="orange"/>
+        <Feather name="sun" style={{marginTop:100, }} size={70} color="orange"/>
         <View style={styles.temperature}>
-          <Text style={[styles.temperatureText, {fontSize:85, marginTop:190}]}>{currentTemperature}°</Text>
+          <Text style={[styles.temperatureText, {fontSize:85, marginTop:65 }]}>{currentTemperature}°</Text>
         </View>
       </View>
       <View style = {styles.cardView}>
@@ -85,6 +98,22 @@ export default function App() {
           <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
           <Text>Now</Text>
         </View>
+        <View style={styles.card}>
+          <Text>12:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>Now</Text>
+        </View>
+        <View style={styles.card}>
+          <Text>12:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>Now</Text>
+        </View>
+        <View style={styles.card}>
+          <Text>12:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>Now</Text>
+        </View>
+        
       </View>
     </View>
   )
