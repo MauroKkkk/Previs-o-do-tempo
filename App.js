@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useState, useEffect} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { EvilIcons } from '@expo/vector-icons';
-import { TouchableNativeFeedback, TouchableOpacity } from 'react-native-web';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function App() {
   const [darkTheme, setDarkTheme] = useState(true)
@@ -13,8 +12,6 @@ export default function App() {
 
   const styles = StyleSheet.create({
     container: {
-      margin: 0,
-      padding: 0,
       flex: 1,
       backgroundColor: 'white',
       alignItems: 'center',
@@ -33,20 +30,60 @@ export default function App() {
       alignSelf: 'self-start',
     },
     cardView:{
-      //color: '#0e33ff',
+      flexDirection: 'row',
+    },
+    card:{
+      backgroundColor: '#427BFF',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 6,
+      margin: 10,
+      padding: 10,
+      width: 50,
+      height: 100,
+    },
+
+    refreshButton:{
+      position: 'absolute',
+      margin: 30,
+      alignSelf: 'self-start',
+    },
+    temperature:{
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginTop: 10,
+    },
+    temperatureText:{
+      fontSize: 20,
+    },
+
+    cardTitle:{
+      fontSize: 10,
     },
   });
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.refreshButton}>
-        <EvilIcons name="refresh" size={30} color='black'/>
+        <AntDesign name="bars" size={30} color='black'/>
       </TouchableOpacity>
-  
       <View style={styles.container}>
-        <Feather name="sun" style={{marginTop: 50}} size={40} color="orange"/>
+        <Feather name="sun" style={{marginTop: 150}} size={70} color="orange"/>
         <View style={styles.temperature}>
-          <Text style={styles.temperatureText}>{currentTemperature}</Text>
-          <Text style={[styles.temperatureText, {fontSize: 15}]}>°C</Text>
+          <Text style={[styles.temperatureText, {fontSize:85, marginTop:190}]}>{currentTemperature}°</Text>
+        </View>
+      </View>
+      <View style = {styles.cardView}>
+
+      
+        <View style={styles.card}>
+          <Text>12:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>Now</Text>
+        </View>
+        <View style={styles.card}>
+          <Text>12:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>Now</Text>
         </View>
       </View>
     </View>
