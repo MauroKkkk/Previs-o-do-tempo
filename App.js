@@ -1,6 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
+
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -102,22 +103,57 @@ export default function App() {
       width:200,
     },
     subInfo:{
-      marginStart:-50,
+      marginStart:-66,
       flexDirection:'column',
       justifyContent:'space-between',
-      width:160,
     },
-    cardIcons:{
+    cardIcons0:{
       flexDirection:'row',
-      justifyContent:'space-between',
-      height:70,
-      borderColor:'white',
-      borderRadius:1,
-      borderBottomStartRadius:10,
+      justifyContent: 'center',
+      height:73,
+      alignItems:'center',
+      borderColor:'#A0BDFF', 
+      borderLeftColor:'white',   
       borderWidth:1,
-      width:150,
+      width:171,
+    },
+    cardIcons1:{
+      flexDirection:'row',
+      justifyContent: 'center',
+      height:74,
+      alignItems:'center',
+      borderColor:'#A0BDFF',   
+      borderLeftColor:'white',
+      borderBottomColor:'white', 
+      borderWidth:1,
+      width:171,
+    },
+    cardIcons2:{
+      flexDirection:'row',
+      justifyContent: 'center',
+      height:73,
+      alignItems:'center',
+      borderColor:'#A0BDFF',
+      borderRightColor:'white',    
+      borderWidth:1,
+      width:171,
+    },
+    cardIcons3:{
+      flexDirection:'row',
+      justifyContent: 'center',
+      height:74,
+      alignItems:'center',
+      borderColor:'#A0BDFF',
+
+      borderRightColor:'white',
+      borderBottomColor:'white',     
+      borderWidth:1,
+      width:171,
     },
     infoLayout:{
+      marginStart: 19,
+      alignItems:'center',
+      marginTop:1,
       borderTopColor:'white',
 
       flexDirection:'column',
@@ -151,7 +187,7 @@ export default function App() {
           <View style={styles.info}>
             <View style={styles.subInfo}>
               <View>
-                <View style={styles.cardIcons}>
+                <View style={styles.cardIcons0}>
                   <Fontisto name="wind" size={24} color="white" />
                   <View style={styles.infoLayout}>
                     <Text style={{color:'#A0BDFF', fontWeight:500}}>Vento</Text>
@@ -160,7 +196,7 @@ export default function App() {
                 </View>
                 
               </View>
-                <View style={styles.cardIcons}>
+                <View style={styles.cardIcons1}>
                   <Feather name="sun" size={24} color="white"/>
                   <View style={styles.infoLayout}>
                     <Text style={{color:'#A0BDFF', fontWeight:500}}>Incidencia UV</Text>
@@ -170,14 +206,14 @@ export default function App() {
                 </View>
             </View>
             <View>
-              <View style={styles.cardIcons}>
+              <View style={styles.cardIcons2}>
                 <Feather name="thermometer" size={24} color="white" />
                 <View style={styles.infoLayout}>
                   <Text style={{color:'#A0BDFF', fontWeight:500}}>Sensação termica</Text>
                   <Text style={{color:'white'}}>30°</Text>
                 </View>
               </View>
-              <View style={styles.cardIcons}>
+              <View style={styles.cardIcons3}>
                 <Entypo name="line-graph" size={24} color="white" />
                 <View style={styles.infoLayout}>
                   <Text style={{color:'#A0BDFF', fontWeight:500}}>Pressão</Text>
@@ -193,7 +229,7 @@ export default function App() {
       <View style={styles.titleBottom}>
         <Text>Hoje</Text>
         <TouchableOpacity>
-          <Text style={{color:'gray'}}>Proximos 7 dias > </Text>
+          <Text style={{color:'gray'}}>Proximos 7 dias </Text>
         </TouchableOpacity>
       </View>
       <View style = {styles.cardView}>
@@ -221,6 +257,16 @@ export default function App() {
         </View>
         <View style={styles.card}>
           <Text>20:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>24°</Text>
+        </View>
+        <View style={styles.card}>
+          <Text>22:00</Text>
+          <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
+          <Text>24°</Text>
+        </View>
+        <View style={styles.card}>
+          <Text>00:00</Text>
           <Feather name="sun" style={{marginTop: 5}} size={35} color="orange"/>
           <Text>24°</Text>
         </View>
