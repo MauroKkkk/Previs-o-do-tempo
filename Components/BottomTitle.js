@@ -15,6 +15,7 @@ export default function BottomTitle(){
 
 const styles = StyleSheet.create({
     titleBottom:{
+        marginTop:40,
         flexDirection:'row',
         justifyContent:'space-between',
         width:340,

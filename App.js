@@ -1,14 +1,9 @@
-import { AntDesign } from '@expo/vector-icons';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import Menu from './Components/Menu.js';
 import Title from './Components/Title';
 import Card from './Components/Card.js';
-import { Feather } from '@expo/vector-icons';
-import { Fontisto } from '@expo/vector-icons'; 
-import { Entypo } from '@expo/vector-icons'; 
 import BottomTitle from './Components/BottomTitle.js';
-import CardInfo from './Components/CardInfo.js';
 import BottomCard from './Components/BottomCard.js';
 
 

@@ -1,7 +1,5 @@
 import { View, Text, StyleSheet } from "react-native-web";
 import { Feather } from '@expo/vector-icons';
-import { Fontisto } from '@expo/vector-icons'; 
-import { Entypo } from '@expo/vector-icons'; 
 import CardInfo from "./CardInfo";
 
 export default function Card(props){
@@ -29,7 +27,7 @@ const styles = StyleSheet.create({
     },
     temperature:{
         alignItems: 'center',
-        flexDirection: 'row',
+        marginBottom:25,
     },
     temperatureText:{
         fontSize: 40,
