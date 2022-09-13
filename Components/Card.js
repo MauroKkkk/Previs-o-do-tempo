@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native-web";
 import { Feather } from '@expo/vector-icons';
 import CardInfo from "./CardInfo";
+import SubCard from "./SubCard";
 
 export default function Card(props){
     return(
@@ -11,10 +12,31 @@ export default function Card(props){
           <View style={styles.temperature}>
             <Text style={[styles.temperatureText, {color:'white',fontWeight:600,fontSize:85,marginTop:15,  }]}>27°</Text>
           </View>
-          <CardInfo/>
-        </View>
+          <View style={styles.cardSub}>
+          <View style={styles.cardSubTop}>
+                <View style={styles.cardSubLeftTop}>
+                    <SubCard icon="wind"/>
+                </View>
+                <View style={styles.cardSubRightTop}>
+                    <SubCard icon='thermometer'/>
+                </View>
+            </View>
+                <View style={styles.cardSubBottom}>
+                    <View style={styles.cardSubLeftBottom}>
+                        <SubCard icon="sun"/>
+                    </View>
+                    <View style={styles.cardSubRightBottom}>
+                        <SubCard icon='line-graph'/>
+                    </View>
+                    
+                </View>
+          </View>
+
+
+            </View>
     )
 }
+                
 
 const styles = StyleSheet.create({
     mainCard:{
@@ -31,6 +53,23 @@ const styles = StyleSheet.create({
     },
     temperatureText:{
         fontSize: 40,
+    },
+    cardSub:{
+        flexDirection:'column',
+    },
+    cardSubTop:{
+        flexDirection:'row',
+        width: 342,
+    },
+    cardSubBottom:{
+        flexDirection:'row',
+    },
+    cardSubTopLeft:{
+        width: 171,
+    },
+    cardSubBottom:{
+        flexDirection:"row",
+        width: 342,
     },
 
     
