@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from "react-native-web";
 import { Feather } from '@expo/vector-icons';
 import CardInfo from "./CardInfo";
 import SubCard from "./SubCard";
+import DatePicker from 'react-native-datepicker';
 
 export default function Card(props){
     return(
@@ -15,18 +16,18 @@ export default function Card(props){
           <View style={styles.cardSub}>
           <View style={styles.cardSubTop}>
                 <View style={styles.cardSubLeftTop}>
-                    <SubCard icon="wind"/>
+                    Car
                 </View>
                 <View style={styles.cardSubRightTop}>
-                    <SubCard icon='thermometer'/>
+
                 </View>
             </View>
                 <View style={styles.cardSubBottom}>
                     <View style={styles.cardSubLeftBottom}>
-                        <SubCard icon="sun"/>
+                   
                     </View>
                     <View style={styles.cardSubRightBottom}>
-                        <SubCard icon='line-graph'/>
+                        
                     </View>
                     
                 </View>
